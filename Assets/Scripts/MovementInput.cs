@@ -79,6 +79,8 @@ public class MovementInput : MonoBehaviour {
 		if (blockRotationPlayer == false) {
 			transform.rotation = Quaternion.Slerp (transform.rotation, Quaternion.LookRotation (desiredMoveDirection), desiredRotationSpeed);
 		}
+
+        //controller.Move(desiredMoveDirection * moveSpeed * Time.deltaTime);
 	}
 
 	void InputMagnitude() {
@@ -99,5 +101,7 @@ public class MovementInput : MonoBehaviour {
 		} else if (Speed < allowPlayerRotation) {
 			anim.SetFloat ("InputMagnitude", Speed, StopAnimTime, Time.deltaTime);
 		}
+
+        controller.Move(desiredMoveDirection * Speed * moveSpeed * Time.deltaTime);
 	}
 }
