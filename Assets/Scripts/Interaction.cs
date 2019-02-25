@@ -10,7 +10,7 @@ public class Interaction : MonoBehaviour
     Animator animator;
     MovementInput moveInput;
 
-    public bool isPressingInteractionButton;
+    bool isPressingInteractionButton;
 
     private void Awake()
     {
@@ -35,26 +35,31 @@ public class Interaction : MonoBehaviour
             moveInput.isZoomCamera = false;
         }
 
-        Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
+        GetInteraction();
 
-        if (Physics.Raycast(ray, out hit, 100, interactionLayer))
-        {
-            Debug.Log("We hit " + hit.collider.name + " : " + hit.point);
-        }
+        Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+        Debug.DrawLine(ray.origin, cam.transform.forward * 5000000, Color.red);
     }
 
     private void GetInteraction()
     {
         Ray interactionRay = cam.ScreenPointToRay(Input.mousePosition);
         RaycastHit interactionInfo;
-        if (Physics.SphereCast(interactionRay, 1f, out interactionInfo, Mathf.Infinity, interactionLayer))
+        if (Physics.Raycast(interactionRay.origin, cam.transform.forward, out interactionInfo, Mathf.Infinity, interactionLayer))
         {
-            GameObject interactedObject = interactionInfo.collider.gameObject;
+            bool hit = false;
 
-            if (interactedObject != null)
+            if (interactionInfo.collider != null)
             {
-                interactedObject.GetComponent<Interactable>().Interact();
+                hit = true;
+            } else
+            {
+                hit = false;
+            }
+
+            if(hit)
+            {
+                interactionInfo.collider.GetComponent<Interactable>().Interact();
             }
         }
     }

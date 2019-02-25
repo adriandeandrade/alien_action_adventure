@@ -45,6 +45,9 @@ public class MovementInput : MonoBehaviour
         anim = this.GetComponentInChildren<Animator>();
         cam = Camera.main;
         controller = this.GetComponent<CharacterController>();
+
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = true;
     }
 
     // Update is called once per frame

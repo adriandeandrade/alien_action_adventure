@@ -4,14 +4,26 @@ using UnityEngine;
 
 public class ItemDisplay : MonoBehaviour
 {
-    bool isHighlighted = false;
+    public Color onMouseOverColor;
 
-    public void HighlightItem()
+    Color originalColor;
+    MeshRenderer meshRenderer;
+
+    private void Awake()
     {
-        if(!isHighlighted)
-        {
-            isHighlighted = true;
-            Debug.Log("In range of item.");
-        }
+        meshRenderer = GetComponentInChildren<MeshRenderer>();
+        originalColor = meshRenderer.material.color;
+    }
+
+    private void OnMouseOver()
+    {
+        meshRenderer.material.color = onMouseOverColor;
+
+        Debug.Log("hovered object");
+    }
+
+    private void OnMouseExit()
+    {
+        meshRenderer.material.color = originalColor;
     }
 }

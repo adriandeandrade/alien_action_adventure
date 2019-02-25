@@ -2,41 +2,54 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(SphereCollider))]
 public class Interactable : MonoBehaviour
 {
     [SerializeField] private float interactionRadius = 3f;
     [SerializeField] private Transform interactionTransform;
     [SerializeField] private Transform player;
 
-    bool hasInteracted = false;
+    [SerializeField] private Color debugColor;
 
-    private void Update()
+    Color originalColor;
+    MeshRenderer meshRenderer;
+
+    bool isInteracting = false;
+
+    private void Awake()
     {
-        if(!hasInteracted)
-        {
-            float distance = Vector3.Distance(player.position, interactionTransform.position);
-
-            if(distance <= interactionRadius)
-            {
-                Interact();
-                hasInteracted = true;
-            }
-        }
+        meshRenderer = GetComponentInChildren<MeshRenderer>();
+        originalColor = meshRenderer.material.color;
     }
 
     public virtual void Interact()
     {
-        Debug.Log("Interacting with: " + transform.name);
+        //if(!isInteracting)
+        //{
+        //    isInteracting = true;
+        //    Debug.Log("looking at item.");
+        //}
     }
 
-    private void OnDrawGizmosSelected()
+    private void OnTriggerEnter(Collider other)
     {
-        if (interactionTransform == null)
+        if (other.CompareTag("Player") && !isInteracting)
         {
-            interactionTransform = transform;
-        }
+            meshRenderer.material.color = debugColor;
 
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(interactionTransform.position, interactionRadius);
+            isInteracting = true;
+            Debug.Log("Has interacted with: " + transform.name);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player") && isInteracting)
+        {
+            meshRenderer.material.color = originalColor;
+
+            isInteracting = false;
+            Debug.Log("Stopped interacting with: " + transform.name);
+        }
     }
 }
