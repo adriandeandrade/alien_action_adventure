@@ -66,8 +66,15 @@ public class CameraController : MonoBehaviour
         movementInput.isZoomCamera = false;
     }
 
-    //IEnumerator CameraFovLerp(float lerpTarget)
-    //{
-    //    float currentFov = cam.fe
-    //}
+    IEnumerator CameraFovLerp(float lerpTarget, float time)
+    {
+        float currentFov = cam.fieldOfView;
+
+        while(currentFov != lerpTarget)
+        {
+            currentFov = Mathf.Lerp(currentFov, lerpTarget, time);
+        }
+
+        yield break;
+    }
 }
