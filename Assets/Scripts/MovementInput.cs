@@ -96,7 +96,8 @@ public class MovementInput : MonoBehaviour
     {
         if(isZoomCamera)
         {
-            faceCameraBone.forward = cam.transform.forward;
+            //faceCameraBone.forward = cam.transform.forward;
+            transform.rotation = Quaternion.LookRotation(cam.transform.forward);
         }
     }
 
