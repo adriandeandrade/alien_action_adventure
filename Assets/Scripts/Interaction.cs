@@ -9,58 +9,46 @@ public class Interaction : MonoBehaviour
     Camera cam;
     Animator animator;
     MovementInput moveInput;
+    CameraController cameraController;
 
-    bool isPressingInteractionButton;
+    bool isZoom;
 
     private void Awake()
     {
         moveInput = GetComponent<MovementInput>();
         animator = GetComponentInChildren<Animator>();
         cam = Camera.main;
+        cameraController = cam.GetComponentInParent<CameraController>();
     }
 
     private void Update()
     {
-        float interacting = Input.GetAxis("Left Trigger");
-        if (!isPressingInteractionButton && interacting > 0.01)
+        //float interacting = Input.GetAxis("Left Trigger");
+
+        //if (!isZoom && interacting > 0.01)
+        //{
+        //    animator.SetBool("IsInteracting", true);
+        //    isZoom = true;
+        //    cameraController.SwitchToZoomTarget();
+        //}
+        //else if (interacting == 0)
+        //{
+        //    animator.SetBool("IsInteracting", false);
+        //    isZoom = false;
+        //    cameraController.SwitchToOriginalTarget();
+        //}
+
+        if (!isZoom && Input.GetKey(KeyCode.Space))
         {
             animator.SetBool("IsInteracting", true);
-            isPressingInteractionButton = true;
-            moveInput.isZoomCamera = true;
+            isZoom = true;
+            cameraController.SwitchToZoomTarget();
         }
-        else if (interacting == 0 && isPressingInteractionButton)
+        else if (isZoom && Input.GetKeyUp(KeyCode.Space))
         {
             animator.SetBool("IsInteracting", false);
-            isPressingInteractionButton = false;
-            moveInput.isZoomCamera = false;
-        }
-
-        GetInteraction();
-
-        Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-        Debug.DrawLine(ray.origin, cam.transform.forward * 5000000, Color.red);
-    }
-
-    private void GetInteraction()
-    {
-        Ray interactionRay = cam.ScreenPointToRay(Input.mousePosition);
-        RaycastHit interactionInfo;
-        if (Physics.Raycast(interactionRay.origin, cam.transform.forward, out interactionInfo, Mathf.Infinity, interactionLayer))
-        {
-            bool hit = false;
-
-            if (interactionInfo.collider != null)
-            {
-                hit = true;
-            } else
-            {
-                hit = false;
-            }
-
-            if(hit)
-            {
-                interactionInfo.collider.GetComponent<Interactable>().Interact();
-            }
+            isZoom = false;
+            cameraController.SwitchToOriginalTarget();
         }
     }
 }
