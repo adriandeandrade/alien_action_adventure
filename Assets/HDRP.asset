@@ -202,4 +202,5 @@ MonoBehaviour:
   allowShaderVariantStripping: 1
   enableSRPBatcher: 0
   enableVariantStrippingLog: 0
-  diffusionProfileSettings: {fileID: 0}
+  diffusionProfileSettings: {fileID: 11400000, guid: d5b8795655ef1974fb9277ad6b52f477,
+    type: 2}
