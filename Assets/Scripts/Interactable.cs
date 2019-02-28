@@ -5,35 +5,32 @@ using UnityEngine;
 [RequireComponent(typeof(SphereCollider))]
 public class Interactable : MonoBehaviour
 {
-    [SerializeField] private Color debugColor;
-
-    Color originalColor;
-    MeshRenderer meshRenderer;
-
     bool isInteracting = false;
+
+    WorldSpaceUIController worldSpaceUIController;
 
     private void Awake()
     {
-        meshRenderer = GetComponentInChildren<MeshRenderer>();
-        //originalColor = meshRenderer.material.color;
+        worldSpaceUIController = FindObjectOfType<WorldSpaceUIController>();
+    }
+
+    private void Update()
+    {
+        
     }
 
     public virtual void Interact()
     {
-        //if(!isInteracting)
-        //{
-        //    isInteracting = true;
-        //    Debug.Log("looking at item.");
-        //}
+        
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player") && !isInteracting)
         {
-            //meshRenderer.material.color = debugColor;
-
             isInteracting = true;
+            worldSpaceUIController.SetPosition(gameObject);
+            worldSpaceUIController.ToggleCanvas(true);
             Debug.Log("Has interacted with: " + transform.name);
         }
     }
@@ -42,9 +39,8 @@ public class Interactable : MonoBehaviour
     {
         if (other.CompareTag("Player") && isInteracting)
         {
-            //meshRenderer.material.color = originalColor;
-
             isInteracting = false;
+            worldSpaceUIController.ToggleCanvas(false);
             Debug.Log("Stopped interacting with: " + transform.name);
         }
     }

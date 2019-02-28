@@ -7,11 +7,16 @@ public class CameraController : MonoBehaviour
     [SerializeField] private float cameraMoveSpeed = 120f;
     [SerializeField] private float clampAngle = 80f;
     [SerializeField] private float sensitivity = 150f;
+    [SerializeField] private float fovLerpSpeed = 0.5f;
+    [SerializeField] private float followSpeed = 0.5f;
     [SerializeField] private GameObject followTarget;
     [SerializeField] private Vector3 offset;
 
     float rotY;
     float rotX;
+    float newFov;
+
+    bool isZoomed;
 
     Camera cam;
     MovementInput movementInput;
@@ -24,9 +29,12 @@ public class CameraController : MonoBehaviour
 
     private void Start()
     {
+        isZoomed = false;
+
         Vector3 rot = transform.localRotation.eulerAngles;
         rotY = rot.y;
         rotX = rot.x;
+        newFov = cam.fieldOfView;
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -43,38 +51,31 @@ public class CameraController : MonoBehaviour
         rotX = Mathf.Clamp(rotX, -clampAngle, clampAngle);
 
         Quaternion localRotation = Quaternion.Euler(rotX, rotY, 0f);
-        transform.rotation = localRotation;
+        //transform.rotation = localRotation;
+
+        cam.fieldOfView = Mathf.Lerp(cam.fieldOfView, newFov, Time.deltaTime / fovLerpSpeed);
     }
 
     private void LateUpdate()
     {
         Transform target = followTarget.transform;
 
-        float step = cameraMoveSpeed * Time.deltaTime;
-        transform.position = Vector3.MoveTowards(transform.position, target.position + offset, step);
-    }
-
-    public void SwitchToZoomTarget()
-    {
-        cam.fieldOfView = 30f;
-        movementInput.isZoomCamera = true;
-    }
-
-    public void SwitchToOriginalTarget()
-    {
-        cam.fieldOfView = 50f;
-        movementInput.isZoomCamera = false;
-    }
-
-    IEnumerator CameraFovLerp(float lerpTarget, float time)
-    {
-        float currentFov = cam.fieldOfView;
-
-        while(currentFov != lerpTarget)
+        if (isZoomed)
         {
-            currentFov = Mathf.Lerp(currentFov, lerpTarget, time);
+            float step = cameraMoveSpeed * Time.deltaTime;
+            transform.position = Vector3.MoveTowards(transform.position, target.position + offset, step);
         }
+        else
+        {
+            float step = followSpeed * Time.deltaTime;
+            transform.position = Vector3.Lerp(transform.position, target.position + offset, step);
+        }
+    }
 
-        yield break;
+    public void ToggleZoomAndSetFov(bool zoom, float _newFov)
+    {
+        newFov = _newFov;
+        isZoomed = zoom;
+        movementInput.isZoomCamera = isZoomed;
     }
 }

@@ -38,17 +38,15 @@ public class Interaction : MonoBehaviour
         //    cameraController.SwitchToOriginalTarget();
         //}
 
-        if (!isZoom && Input.GetKey(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             animator.SetBool("IsInteracting", true);
-            isZoom = true;
-            cameraController.SwitchToZoomTarget();
+            cameraController.ToggleZoomAndSetFov(true, 30f);
         }
-        else if (isZoom && Input.GetKeyUp(KeyCode.Space))
+        else if (Input.GetKeyUp(KeyCode.Space))
         {
             animator.SetBool("IsInteracting", false);
-            isZoom = false;
-            cameraController.SwitchToOriginalTarget();
+            cameraController.ToggleZoomAndSetFov(false, 50f);
         }
     }
 }

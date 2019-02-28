@@ -42,6 +42,8 @@ public class MovementInput : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        isZoomCamera = false;
+
         anim = this.GetComponentInChildren<Animator>();
         cam = Camera.main;
         controller = this.GetComponent<CharacterController>();
@@ -96,8 +98,8 @@ public class MovementInput : MonoBehaviour
     {
         if(isZoomCamera)
         {
-            //faceCameraBone.forward = cam.transform.forward;
-            transform.rotation = Quaternion.LookRotation(cam.transform.forward);
+            faceCameraBone.forward = cam.transform.forward;
+            //transform.rotation = Quaternion.LookRotation(cam.transform.forward);
         }
     }
 
