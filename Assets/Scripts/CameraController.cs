@@ -9,6 +9,7 @@ public class CameraController : MonoBehaviour
     [SerializeField] private float sensitivity = 150f;
     [SerializeField] private float fovLerpSpeed = 0.5f;
     [SerializeField] private float followSpeed = 0.5f;
+    [SerializeField] private bool doLerpTarget;
     [SerializeField] private GameObject followTarget;
     [SerializeField] private Vector3 offset;
 
@@ -51,7 +52,7 @@ public class CameraController : MonoBehaviour
         rotX = Mathf.Clamp(rotX, -clampAngle, clampAngle);
 
         Quaternion localRotation = Quaternion.Euler(rotX, rotY, 0f);
-        //transform.rotation = localRotation;
+        transform.rotation = localRotation;
 
         cam.fieldOfView = Mathf.Lerp(cam.fieldOfView, newFov, Time.deltaTime / fovLerpSpeed);
     }
@@ -60,15 +61,15 @@ public class CameraController : MonoBehaviour
     {
         Transform target = followTarget.transform;
 
-        if (isZoomed)
-        {
-            float step = cameraMoveSpeed * Time.deltaTime;
-            transform.position = Vector3.MoveTowards(transform.position, target.position + offset, step);
-        }
-        else
+        if (!isZoomed && doLerpTarget)
         {
             float step = followSpeed * Time.deltaTime;
             transform.position = Vector3.Lerp(transform.position, target.position + offset, step);
+        }
+        else
+        {
+            float step = cameraMoveSpeed * Time.deltaTime;
+            transform.position = Vector3.MoveTowards(transform.position, target.position + offset, step);
         }
     }
 

@@ -5,18 +5,37 @@ using UnityEngine;
 [RequireComponent(typeof(SphereCollider))]
 public class Interactable : MonoBehaviour
 {
-    bool isInteracting = false;
+    public InteractableObjectData objectData;
 
-    WorldSpaceUIController worldSpaceUIController;
+    [SerializeField] private Transform interactionPosition;
+    [SerializeField] private bool useCustomInteractionPosition;
+
+    bool isInteracting = false;
+    string objectName;
+
+    InteractionUIController worldSpaceUIController;
+    SphereCollider interactionCollider;
 
     private void Awake()
     {
-        worldSpaceUIController = FindObjectOfType<WorldSpaceUIController>();
+        worldSpaceUIController = FindObjectOfType<InteractionUIController>();
+        interactionCollider = GetComponent<SphereCollider>();
     }
 
-    private void Update()
+    private void Start()
     {
-        
+        if(objectData != null)
+        {
+            InitializeInteractable();
+        } else
+        {
+            Debug.LogError("Object does not have a reference to its data object.");
+        }
+
+        if(useCustomInteractionPosition)
+        {
+            interactionCollider.center = interactionPosition.localPosition;
+        }
     }
 
     public virtual void Interact()
@@ -24,14 +43,19 @@ public class Interactable : MonoBehaviour
         
     }
 
+    private void InitializeInteractable()
+    {
+        objectName = objectData.objectName;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player") && !isInteracting)
         {
             isInteracting = true;
-            worldSpaceUIController.SetPosition(gameObject);
+            worldSpaceUIController.SetPosition(interactionPosition, useCustomInteractionPosition);
+            worldSpaceUIController.UpdateUI(objectData);
             worldSpaceUIController.ToggleCanvas(true);
-            Debug.Log("Has interacted with: " + transform.name);
         }
     }
 
@@ -40,8 +64,8 @@ public class Interactable : MonoBehaviour
         if (other.CompareTag("Player") && isInteracting)
         {
             isInteracting = false;
-            worldSpaceUIController.ToggleCanvas(false);
-            Debug.Log("Stopped interacting with: " + transform.name);
+            worldSpaceUIController.TriggerFadeOut();
         }
     }
+
 }
