@@ -1,0 +1,210 @@
+fileFormatVersion: 2
+guid: 6b1b7fb71c6449b438323d2a730f77ec
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: 1.Start_Room
+    100002: 10.Generator_Room
+    100004: 2.Corridors
+    100006: 3-Observation_Room
+    100008: 4.Secret_Lab
+    100010: 5.Storage_Area
+    100012: 6.Main_Cylinder
+    100014: 8.Living_Quarters
+    100016: 9.Office
+    100018: //RootNode
+    400000: 1.Start_Room
+    400002: 10.Generator_Room
+    400004: 2.Corridors
+    400006: 3-Observation_Room
+    400008: 4.Secret_Lab
+    400010: 5.Storage_Area
+    400012: 6.Main_Cylinder
+    400014: 8.Living_Quarters
+    400016: 9.Office
+    400018: //RootNode
+    2100000: Mat_Floor-Bevel
+    2100002: Mat_Walls
+    2100004: Mat_Ceiling
+    2100006: Mat_WindowFrame
+    2100008: Mat_ElevatorCylinder
+    2100010: Mat_Elevator-Shaft
+    2100012: Mat_Elevator-Interior-Walls
+    2100014: Mat_Elevator-Interior-FloorCeiling
+    2100016: Mat_Elevator-Frame
+    2100018: Mat_Platform-Bottom
+    2100020: Mat_Platform-Top
+    2100022: Mat_Platform-Sides
+    2300000: 1.Start_Room
+    2300002: 10.Generator_Room
+    2300004: 2.Corridors
+    2300006: 3-Observation_Room
+    2300008: 4.Secret_Lab
+    2300010: 5.Storage_Area
+    2300012: 6.Main_Cylinder
+    2300014: 8.Living_Quarters
+    2300016: 9.Office
+    3300000: 1.Start_Room
+    3300002: 10.Generator_Room
+    3300004: 2.Corridors
+    3300006: 3-Observation_Room
+    3300008: 4.Secret_Lab
+    3300010: 5.Storage_Area
+    3300012: 6.Main_Cylinder
+    3300014: 8.Living_Quarters
+    3300016: 9.Office
+    4300000: 5.Storage_Area
+    4300002: 3-Observation_Room
+    4300004: 4.Secret_Lab
+    4300006: 1.Start_Room
+    4300008: 2.Corridors
+    4300010: 6.Main_Cylinder
+    4300012: 10.Generator_Room
+    4300014: 9.Office
+    4300016: 8.Living_Quarters
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Ceiling
+    second: {fileID: 2100000, guid: 7668aeac2c1c7b343beff93cfb0f5cc3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Elevator-Frame
+    second: {fileID: 2100000, guid: c75537b7bec87424e9cb1056654e9a06, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Elevator-Interior-FloorCeiling
+    second: {fileID: 2100000, guid: 893eca6286a38aa4cae77c2c009d9c62, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Elevator-Interior-Walls
+    second: {fileID: 2100000, guid: e1f733e9904415e49adc18be24672ca2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Elevator-Shaft
+    second: {fileID: 2100000, guid: 61575835894c1604dac9d85f20b01a93, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_ElevatorCylinder
+    second: {fileID: 2100000, guid: 3ff8d6b124830254d8db43d02e536302, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Floor-Bevel
+    second: {fileID: 2100000, guid: 8656c8855b9d8ad4cb8bca0c01987ac6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Platform-Bottom
+    second: {fileID: 2100000, guid: 1c5f07b821e98144890122427c1f6f0a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Platform-Sides
+    second: {fileID: 2100000, guid: 9504920f2a3c12b4380fa498adfac10f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Platform-Top
+    second: {fileID: 2100000, guid: 72b9ee174fcfd194eb3fa8c92cf03dda, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Walls
+    second: {fileID: 2100000, guid: 58e2131d80c9c7646ba162b9918166e6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_WindowFrame
+    second: {fileID: 2100000, guid: 7ebe0fcd5f3de5f4b8e17567e0f16457, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 0
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

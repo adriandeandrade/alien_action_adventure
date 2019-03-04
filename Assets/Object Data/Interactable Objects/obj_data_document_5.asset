@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 885222784fbbf5b4385f47ec75e09d01, type: 3}
+  m_Name: obj_data_document_5
+  m_EditorClassIdentifier: 
+  interactionTitle: Document
+  objectDescriptionTitle: It's Over 9000!!
+  objectDescription: "\"If only I could access the Tech room, I\u2019m sure I could
+    find something to restart this damn generator. The door is blocked and I\u2019m
+    NOT using the AM gun, with Amelie\u2019s flesh still encrusted on it and all.
+    Starvation feels better.\u201D"
+  isDocument: 0

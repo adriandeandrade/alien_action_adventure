@@ -1,0 +1,184 @@
+fileFormatVersion: 2
+guid: 61827265fcfdec54caeee8d3dab36b38
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Back_Piece
+    100004: Barrel
+    100006: Barrel_Housing
+    100008: Crosshair
+    100010: Rail
+    100012: Trigger
+    100014: Trigger_Guard
+    100016: Upper
+    400000: //RootNode
+    400002: Back_Piece
+    400004: Barrel
+    400006: Barrel_Housing
+    400008: Crosshair
+    400010: Rail
+    400012: Trigger
+    400014: Trigger_Guard
+    400016: Upper
+    2100000: mat_Pistol_Grip
+    2100002: Mat_Upper
+    2100004: mat_Back_Piece
+    2100006: mat_Barrel_Housing
+    2100008: No Name
+    2100010: mat_barrel
+    2100012: mat_Rail
+    2100014: mat_crosshair
+    2300000: //RootNode
+    2300002: Back_Piece
+    2300004: Barrel
+    2300006: Barrel_Housing
+    2300008: Crosshair
+    2300010: Rail
+    2300012: Trigger
+    2300014: Trigger_Guard
+    2300016: Upper
+    3300000: //RootNode
+    3300002: Back_Piece
+    3300004: Barrel
+    3300006: Barrel_Housing
+    3300008: Crosshair
+    3300010: Rail
+    3300012: Trigger
+    3300014: Trigger_Guard
+    3300016: Upper
+    4300000: Pistol_Grip
+    4300002: Upper
+    4300004: Back_Piece
+    4300006: Barrel_Housing
+    4300008: Trigger
+    4300010: Trigger_Guard
+    4300012: Barrel
+    4300014: Rail
+    4300016: Crosshair
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Upper
+    second: {fileID: 2100000, guid: e3851ae00cd6b9c458ad0167cdae12bc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: e7f5cf751aebc7641895f559ff83b776, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mat_Back_Piece
+    second: {fileID: 2100000, guid: f03eb857f990b8843bc14b934842c28a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mat_Barrel_Housing
+    second: {fileID: 2100000, guid: 299ccb3a1b26ddb45aff37b64101dd1d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mat_Pistol_Grip
+    second: {fileID: 2100000, guid: 7ab48cd747de42e47b2fcc8fa3bf090e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mat_Rail
+    second: {fileID: 2100000, guid: fdd3037d806d48f41bb3a6c44f5ba95f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mat_barrel
+    second: {fileID: 2100000, guid: c6195f4a3bb202343bed950e2983cd1a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mat_crosshair
+    second: {fileID: 2100000, guid: 2a6f5513b29fa1640bd57f161c9840b1, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

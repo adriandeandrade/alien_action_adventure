@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 885222784fbbf5b4385f47ec75e09d01, type: 3}
+  m_Name: obj_data_document_3
+  m_EditorClassIdentifier: 
+  interactionTitle: Document
+  objectDescriptionTitle: Don't Speak So Soon
+  objectDescription: "I\u2019m so excited, Amelie! I can\u2019t believe we\u2019ve
+    almost finished work on the AM Gun! For the first time in months, something finally
+    goes right! By the way, I\u2019ve started developing some blueprints for upgrades.
+    That thing has so much potential!\r\nFeel free to develop your own, as I\u2019m
+    sure you\u2019re already eager to do! You just need to insert your blueprints
+    in the gun matrix and the imbedded AI converter will add the new capabilities
+    to your weapon. Amazing, isn\u2019t it?\u201D\r\n"
+  isDocument: 1

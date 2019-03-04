@@ -96,7 +96,7 @@ MonoBehaviour:
     value: {x: 0.5, y: 0.5}
   intensity:
     overrideState: 1
-    value: 0.347
+    value: 0.292
   smoothness:
     overrideState: 0
     value: 0.2
@@ -215,16 +215,16 @@ MonoBehaviour:
     value: 50
   saturation:
     overrideState: 1
-    value: 42.4
+    value: 43.3
   brightness:
     overrideState: 0
     value: 0
   postExposure:
-    overrideState: 0
-    value: 0
+    overrideState: 1
+    value: 0.5
   contrast:
     overrideState: 1
-    value: 32.3
+    value: 1.9
   mixerRedOutRedIn:
     overrideState: 0
     value: 100
@@ -1473,7 +1473,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48a79b01ea5641d4aa6daa2e23605641, type: 3}
   m_Name: Bloom
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   enabled:
     overrideState: 1
     value: 1

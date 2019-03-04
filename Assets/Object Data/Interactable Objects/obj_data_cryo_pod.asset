@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 885222784fbbf5b4385f47ec75e09d01, type: 3}
   m_Name: obj_data_cryo_pod
   m_EditorClassIdentifier: 
-  objectName: Cryo Chamber
+  interactionTitle: Cryo Pod
+  objectDescriptionTitle: Let Me Sleep!
+  objectDescription: 
+  isDocument: 0
