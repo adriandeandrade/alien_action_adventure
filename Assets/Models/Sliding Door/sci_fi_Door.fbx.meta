@@ -1,20 +1,68 @@
 fileFormatVersion: 2
-guid: f9d53883e2bd48943a6920ab9947af59
+guid: 21211d90f550bb94d8f80b1b77de2161
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2100000: No Name
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: paper
+    100000: Door_frame
+    100002: Door_left
+    100004: Door_light
+    100006: Door_right
+    100008: //RootNode
+    400000: Door_frame
+    400002: Door_left
+    400004: Door_light
+    400006: Door_right
+    400008: //RootNode
+    2100000: mat_door_frame
+    2100002: mat_door_light_frame
+    2100004: mat_door_light
+    2100006: mat_sliding_door
+    2100008: mat_light_frame
+    2100010: mat_light
+    2300000: Door_frame
+    2300002: Door_left
+    2300004: Door_light
+    2300006: Door_right
+    3300000: Door_frame
+    3300002: Door_left
+    3300004: Door_light
+    3300006: Door_right
+    4300000: Door_frame
+    4300002: Door_left
+    4300004: Door_light
+    4300006: Door_right
+    2186277476908879412: ImportLogs
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: No Name
-    second: {fileID: 2100000, guid: 23a6bfc1f7cd4c344a954727d0046c6b, type: 2}
+      name: mat_door_frame
+    second: {fileID: 2100000, guid: 14c864e80ac311b4db5359d6212123f6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mat_door_light
+    second: {fileID: 2100000, guid: 388276cc8e352d342a3312371deb07a9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mat_door_light_frame
+    second: {fileID: 2100000, guid: 91b8aa8bba4dd684a9c718960fc3a9b4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mat_light
+    second: {fileID: 2100000, guid: 22a22349d9b9e2d4dab9c40d4b661b98, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mat_light_frame
+    second: {fileID: 2100000, guid: 31e8550328a17684aadb722bfc3b7e3b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mat_sliding_door
+    second: {fileID: 2100000, guid: 0e291987af99f5749beeae914d194918, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -54,7 +102,7 @@ ModelImporter:
     importCameras: 1
     importLights: 1
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0
@@ -76,7 +124,7 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-  importAnimation: 1
+  importAnimation: 0
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2

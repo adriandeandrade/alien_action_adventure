@@ -28,10 +28,13 @@ public class InventoryManager : MonoBehaviour
     [SerializeField] private Transform scrollViewContentParent;
 
     bool inventoryActive;
-   
+
+    InventoryUI inventoryUI;
+
     private void Awake()
     {
         InitSingleton();
+        inventoryUI = FindObjectOfType<InventoryUI>();
     }
 
     private void Start()
@@ -43,28 +46,34 @@ public class InventoryManager : MonoBehaviour
 
     private void Update()
     {
-        ToggleInventory();
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            ToggleInventory();
+        }
     }
 
     public void AddItem(Interactable itemToAdd)
     {
+        InteractableObjectData newItemData = itemToAdd.objectData;
+
         GameObject newButton = Instantiate(inventoryButtonPrefab, scrollViewContentParent);
         InventoryItemButton newButtonData = newButton.GetComponent<InventoryItemButton>();
         newButtonData.Init(itemToAdd);
         items.Add(newButton);
+        Destroy(itemToAdd.gameObject);
+        ToggleInventory();
+        inventoryUI.UpdateInventoryUI(newItemData);
+        
     }
 
     private void ToggleInventory()
     {
-        if(Input.GetKeyDown(KeyCode.I))
-        {
-            inventoryActive = !inventoryActive;
-            inventoryScreen.SetActive(inventoryActive);
-            crosshair.SetActive(!inventoryActive);
-            Cursor.lockState = inventoryActive ? CursorLockMode.None : CursorLockMode.Locked;
-            Cursor.visible = inventoryActive;
-            float pause = inventoryActive ? 0f : 1f;
-            Time.timeScale = pause;
-        }
+        inventoryActive = !inventoryActive;
+        inventoryScreen.SetActive(inventoryActive);
+        crosshair.SetActive(!inventoryActive);
+        Cursor.lockState = inventoryActive ? CursorLockMode.None : CursorLockMode.Locked;
+        Cursor.visible = inventoryActive;
+        float pause = inventoryActive ? 0f : 1f;
+        Time.timeScale = pause;
     }
 }
