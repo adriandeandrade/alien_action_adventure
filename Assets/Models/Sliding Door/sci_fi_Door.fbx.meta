@@ -8,29 +8,45 @@ ModelImporter:
     100004: Door_light
     100006: Door_right
     100008: //RootNode
+    100010: Sliding_Door_Frame
+    100012: Sliding_Door_Left
+    100014: Sliding_Door_Right
     400000: Door_frame
     400002: Door_left
     400004: Door_light
     400006: Door_right
     400008: //RootNode
+    400010: Sliding_Door_Frame
+    400012: Sliding_Door_Left
+    400014: Sliding_Door_Right
     2100000: mat_door_frame
     2100002: mat_door_light_frame
     2100004: mat_door_light
     2100006: mat_sliding_door
     2100008: mat_light_frame
     2100010: mat_light
+    2100012: mat_sliding_door_bevel
     2300000: Door_frame
     2300002: Door_left
     2300004: Door_light
     2300006: Door_right
+    2300008: Sliding_Door_Frame
+    2300010: Sliding_Door_Left
+    2300012: Sliding_Door_Right
     3300000: Door_frame
     3300002: Door_left
     3300004: Door_light
     3300006: Door_right
+    3300008: Sliding_Door_Frame
+    3300010: Sliding_Door_Left
+    3300012: Sliding_Door_Right
     4300000: Door_frame
     4300002: Door_left
     4300004: Door_light
     4300006: Door_right
+    4300008: Sliding_Door_Frame
+    4300010: Sliding_Door_Left
+    4300012: Sliding_Door_Right
     2186277476908879412: ImportLogs
   externalObjects:
   - first:
@@ -63,6 +79,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: mat_sliding_door
     second: {fileID: 2100000, guid: 0e291987af99f5749beeae914d194918, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mat_sliding_door_bevel
+    second: {fileID: 2100000, guid: d87ca02da4b1abf4682a99a237ecac21, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

@@ -62,6 +62,7 @@ MonoBehaviour:
   objectData: {fileID: 11400000, guid: f08bb2e2ca45d364bbd480e4d6fad803, type: 2}
   interactionPosition: {fileID: 8309969972131659777}
   useCustomInteractionPosition: 1
+  isInteractable: 1
 --- !u!1 &8309969972131659790
 GameObject:
   m_ObjectHideFlags: 0

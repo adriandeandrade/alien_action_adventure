@@ -11,7 +11,7 @@ public class Interaction : MonoBehaviour
     MovementInput moveInput;
     CameraController cameraController;
 
-    bool isZoom;
+    public bool isZoom;
 
     private void Awake()
     {
@@ -38,15 +38,17 @@ public class Interaction : MonoBehaviour
         //    cameraController.SwitchToOriginalTarget();
         //}
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && !isZoom)
         {
             animator.SetBool("IsInteracting", true);
             cameraController.ToggleZoomAndSetFov(true, 30f);
+            isZoom = true;
         }
-        else if (Input.GetKeyUp(KeyCode.Space))
+        else if (Input.GetKeyUp(KeyCode.Space) && isZoom)
         {
             animator.SetBool("IsInteracting", false);
             cameraController.ToggleZoomAndSetFov(false, 40f);
+            isZoom = false;
         }
     }
 }

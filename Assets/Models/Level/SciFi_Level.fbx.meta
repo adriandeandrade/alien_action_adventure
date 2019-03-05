@@ -35,6 +35,12 @@ ModelImporter:
     2100018: Mat_Platform-Bottom
     2100020: Mat_Platform-Top
     2100022: Mat_Platform-Sides
+    2100024: mat_level_floor
+    2100026: mat_level_walls
+    2100028: mat_level_cieling
+    2100030: mat_level_bevel
+    2100032: mat_observation_window
+    2100034: mat_level_elevator_shaft
     2300000: 1.Start_Room
     2300002: 10.Generator_Room
     2300004: 2.Corridors
@@ -123,6 +129,36 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Mat_WindowFrame
     second: {fileID: 2100000, guid: 7ebe0fcd5f3de5f4b8e17567e0f16457, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mat_level_bevel
+    second: {fileID: 2100000, guid: 6b19af241f7890b4092a0cad42424eb9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mat_level_cieling
+    second: {fileID: 2100000, guid: 8b2ecaaf85379ff4e81cf0f26d51ed72, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mat_level_elevator_shaft
+    second: {fileID: 2100000, guid: 370f0af32790d524682988658b29f5d2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mat_level_floor
+    second: {fileID: 2100000, guid: afd84ea2ff52f4f428c31e168fcc6bdc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mat_level_walls
+    second: {fileID: 2100000, guid: 93a72c9457953f64c8f7759c0927c877, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mat_observation_window
+    second: {fileID: 2100000, guid: b6ab38fcaa0634f4a985c24584a078e2, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -162,7 +198,7 @@ ModelImporter:
     importCameras: 0
     importLights: 0
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0

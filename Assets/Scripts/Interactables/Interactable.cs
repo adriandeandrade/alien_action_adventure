@@ -9,8 +9,10 @@ public class Interactable : MonoBehaviour
 
     [SerializeField] private Transform interactionPosition;
     [SerializeField] private bool useCustomInteractionPosition;
+    public bool isInteractable;
 
     bool isInteracting = false;
+    
     string objectName;
 
     InteractionUIController worldSpaceUIController;
@@ -24,14 +26,6 @@ public class Interactable : MonoBehaviour
 
     private void Start()
     {
-        if(objectData != null)
-        {
-            InitializeInteractable();
-        } else
-        {
-            Debug.LogError("Object does not have a reference to its data object.");
-        }
-
         if(useCustomInteractionPosition)
         {
             interactionCollider.center = interactionPosition.localPosition;
@@ -52,13 +46,10 @@ public class Interactable : MonoBehaviour
 
     }
 
-    private void InitializeInteractable()
-    {
-        objectName = objectData.interactionTitle;
-    }
-
     private void OnTriggerEnter(Collider other)
     {
+        if (!isInteractable) return;
+
         if (other.CompareTag("Player") && !isInteracting)
         {
             isInteracting = true;
@@ -70,6 +61,8 @@ public class Interactable : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
+        if (!isInteractable) return;
+
         if (other.CompareTag("Player") && isInteracting)
         {
             isInteracting = false;
