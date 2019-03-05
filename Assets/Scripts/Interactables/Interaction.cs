@@ -23,21 +23,6 @@ public class Interaction : MonoBehaviour
 
     private void Update()
     {
-        //float interacting = Input.GetAxis("Left Trigger");
-
-        //if (!isZoom && interacting > 0.01)
-        //{
-        //    animator.SetBool("IsInteracting", true);
-        //    isZoom = true;
-        //    cameraController.SwitchToZoomTarget();
-        //}
-        //else if (interacting == 0)
-        //{
-        //    animator.SetBool("IsInteracting", false);
-        //    isZoom = false;
-        //    cameraController.SwitchToOriginalTarget();
-        //}
-
         if (Input.GetKeyDown(KeyCode.Space) && !isZoom)
         {
             animator.SetBool("IsInteracting", true);

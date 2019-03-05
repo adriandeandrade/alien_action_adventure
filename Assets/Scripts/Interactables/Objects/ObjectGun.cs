@@ -7,7 +7,7 @@ public class ObjectGun : Interactable
     public override void Interact()
     {
         InventoryManager.instance.AddItem(this);
-        GameManager.instance.GetGun();
+        GameManager.instance.OnPickupGun.Invoke();
         Destroy(gameObject);
     }
 }

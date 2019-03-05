@@ -12,8 +12,6 @@ public class Interactable : MonoBehaviour
     public bool isInteractable;
 
     bool isInteracting = false;
-    
-    string objectName;
 
     InteractionUIController worldSpaceUIController;
     SphereCollider interactionCollider;

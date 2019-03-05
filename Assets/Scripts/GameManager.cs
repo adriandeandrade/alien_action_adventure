@@ -1,12 +1,31 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
 {
+    #region Singleton
     public static GameManager instance;
+    private void InitSingleton()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
+    }
+
+    #endregion
 
     [SerializeField] private GameObject gunPrefab;
+
+    [Header("Game Events and Triggers")]
+    public UnityEvent OnPickupGun;
 
     bool hasLog2;
     bool hasGun;
@@ -53,13 +72,14 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        if(instance == null)
+        InitSingleton();
+    }
+
+    private void InitalizeEvents()
+    {
+        if(OnPickupGun == null)
         {
-            instance = this;
-        } else
-        {
-            Destroy(gameObject);
-            return;
+            OnPickupGun = new UnityEvent();
         }
     }
 
