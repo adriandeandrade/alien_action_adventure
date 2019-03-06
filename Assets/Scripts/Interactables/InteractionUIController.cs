@@ -33,9 +33,14 @@ public class InteractionUIController : MonoBehaviour
         transform.LookAt(cam.transform);
     }
 
-    public void UpdateUI(InteractableObjectData objData)
+    public void UpdateUI(InventoryItemData data)
     {
-        interactText.SetText("Interact with " + objData.interactionTitle);
+        interactText.SetText("Interact with " + data.interactionTitle);
+    }
+
+    public void UpdateUI(InteractableData data)
+    {
+        interactText.SetText("Interact with " + data.interactionName);
     }
 
     public void SetPosition(Transform _targetObject, bool useCustomPosition)

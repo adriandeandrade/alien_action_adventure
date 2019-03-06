@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class InventoryItemButton : MonoBehaviour
 {
-    [SerializeField] private InteractableObjectData itemData;
+    [SerializeField] private InventoryItemData itemData;
     [SerializeField] private TextMeshProUGUI buttonNameText;
 
     Button itemButton;
@@ -23,7 +23,7 @@ public class InventoryItemButton : MonoBehaviour
 
     public void Init(Interactable item)
     {
-        InteractableObjectData _itemData = item.objectData;
+        InventoryItemData _itemData = item.objectData;
         itemData = _itemData;
         Debug.Log(_itemData);
         buttonNameText.SetText(_itemData.objectDescriptionTitle);

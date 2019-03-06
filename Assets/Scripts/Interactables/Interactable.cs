@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(SphereCollider))]
 public class Interactable : MonoBehaviour
 {
-    public InteractableObjectData objectData;
+    public InventoryItemData objectData;
 
     [SerializeField] private Transform interactionPosition;
     [SerializeField] private bool useCustomInteractionPosition;

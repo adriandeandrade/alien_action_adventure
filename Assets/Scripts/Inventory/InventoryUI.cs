@@ -8,7 +8,7 @@ public class InventoryUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI itemDescriptionText;
     [SerializeField] private TextMeshProUGUI itemButtonTitleText;
 
-    public void UpdateInventoryUI(InteractableObjectData itemData)
+    public void UpdateInventoryUI(InventoryItemData itemData)
     {
         itemDescriptionText.SetText(itemData.objectDescription);
         itemButtonTitleText.SetText(itemData.objectDescriptionTitle);

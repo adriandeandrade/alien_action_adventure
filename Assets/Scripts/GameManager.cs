@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Game Events and Triggers")]
     public UnityEvent OnPickupGun;
+    public LayerMask itemPickUpLayer;
 
     bool hasLog2;
     bool hasGun;

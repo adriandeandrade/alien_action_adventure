@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Interactable Object", menuName = "Interactable Objects/New Interactable Object")]
-public class InteractableObjectData : ScriptableObject
+public class InventoryItemData : ScriptableObject
 {
     public string interactionTitle;
     public string objectDescriptionTitle;
