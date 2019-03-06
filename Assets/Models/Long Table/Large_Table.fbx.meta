@@ -1,26 +1,63 @@
 fileFormatVersion: 2
-guid: 90b110bb973363640baa0f4e0d5257a9
+guid: 77979ad83af94b34b9ac459f33a44f06
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
+    100002: Legs
+    100004: Table_Top
     400000: //RootNode
-    2100000: mat_frame
-    2100002: mat_light
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: light_fixture_2
+    400002: Legs
+    400004: Table_Top
+    2100000: Mat_Table_Surface4
+    2100002: Mat_Table_Bottom
+    2100004: Mat_Table_Surface3
+    2100006: Mat_Table_Surface2
+    2100008: Mat_Table_Edge
+    2100010: Mat_Table_Surface1
+    2100012: Mat_Table_Surface5
+    2300000: Legs
+    2300002: Table_Top
+    3300000: Legs
+    3300002: Table_Top
+    4300000: Legs
+    4300002: Table_Top
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: mat_frame
-    second: {fileID: 2100000, guid: d4f50dd7f3719074cb52f32371341192, type: 2}
+      name: Mat_Table_Bottom
+    second: {fileID: 2100000, guid: a56203640a820684e86b1e27c681d949, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: mat_light
-    second: {fileID: 2100000, guid: 698db79f30c3987499d89ead500524b4, type: 2}
+      name: Mat_Table_Edge
+    second: {fileID: 2100000, guid: 6f6e137532058d344af4ebfd7d5d7e42, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Table_Surface1
+    second: {fileID: 2100000, guid: 721b1125059f3474cb56249733856d07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Table_Surface2
+    second: {fileID: 2100000, guid: f725e02780125774da6323881379c333, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Table_Surface3
+    second: {fileID: 2100000, guid: c6b2df0a626f6564a835fd84e5d69ff6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Table_Surface4
+    second: {fileID: 2100000, guid: 880401d92aef1674ca736db39cfde49a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Table_Surface5
+    second: {fileID: 2100000, guid: b71a7b67e17872a429bd866b88d1914f, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -59,8 +96,8 @@ ModelImporter:
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
-    swapUVChannels: 1
-    generateSecondaryUV: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0
@@ -82,7 +119,7 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-  importAnimation: 0
+  importAnimation: 1
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2

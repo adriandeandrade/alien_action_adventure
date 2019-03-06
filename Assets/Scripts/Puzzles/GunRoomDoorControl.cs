@@ -2,18 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectGunDoor : Interactable
+public class GunRoomDoorControl : MonoBehaviour
 {
     [SerializeField] private GameObject leftDoor;
     [SerializeField] private GameObject rightDoor;
 
-    public override void Interact()
-    {
-        TriggerDoorOpen();
-        isInteractable = false;
-    }
-
-    private void TriggerDoorOpen()
+    public void TriggerDoorOpen()
     {
         leftDoor.SetActive(false);
         rightDoor.SetActive(false);

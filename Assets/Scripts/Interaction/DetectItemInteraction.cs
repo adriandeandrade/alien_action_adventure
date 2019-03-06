@@ -8,11 +8,10 @@ public class DetectItemInteraction : MonoBehaviour
     [SerializeField] private Transform interactionPosition;
     [SerializeField] private bool useCustomInteractionPosition;
     public bool isWithinInteractionDistance;
-    public bool lookingAt;
 
     Camera cam;
     SphereCollider interactionCollider;
-    InteractionUIController worldSpaceUIController;
+    [HideInInspector] public InteractionUIController worldSpaceUIController;
     InventoryItemInteractable inventoryItemInteractable;
     MeshRenderer meshRenderer;
 
@@ -43,23 +42,7 @@ public class DetectItemInteraction : MonoBehaviour
 
     private void Update()
     {
-        //DetectLookAt();
-    }
-
-    private void DetectLookAt()
-    {
-        if (!isWithinInteractionDistance) return;
-
-        RaycastHit hit;
-        if (Physics.Raycast(cam.transform.position, cam.transform.forward, Mathf.Infinity, GameManager.instance.itemPickUpLayer) && !lookingAt)
-        {
-            lookingAt = true;
-            meshRenderer.material.SetColor("_BaseColor", Color.red);
-            Debug.Log("Looking at object");
-            return;
-        }
-
-        lookingAt = false;
+        
     }
 
     private void OnTriggerEnter(Collider other)

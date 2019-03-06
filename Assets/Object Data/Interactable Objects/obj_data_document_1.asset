@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: obj_data_document_1
   m_EditorClassIdentifier: 
   interactionTitle: Document
-  objectDescriptionTitle: Fuck This Techno Shit
+  objectDescriptionTitle: 'Scientist Log #1'
   objectDescription: '"I will try to re-establish power to the central elevator and
     get back to the surface. Fuck this science shit. I just want to see daylight again."'
   isDocument: 1

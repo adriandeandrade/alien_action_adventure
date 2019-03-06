@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: obj_data_document_5
   m_EditorClassIdentifier: 
   interactionTitle: Document
-  objectDescriptionTitle: It's Over 9000!!
+  objectDescriptionTitle: 'Scientist Log #5'
   objectDescription: "\"If only I could access the Tech room, I\u2019m sure I could
     find something to restart this damn generator. The door is blocked and I\u2019m
     NOT using the AM gun, with Amelie\u2019s flesh still encrusted on it and all.

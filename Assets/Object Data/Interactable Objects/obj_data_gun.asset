@@ -14,5 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactionTitle: Anti-Matter Gun
   objectDescriptionTitle: Anti-Matter Gun Manual
-  objectDescription: This is where the manual content will go for the gun.
-  isDocument: 0
+  objectDescription: "The Anti-Matter (AM) Gun is designed to shoot a concentrated
+    ball of anti-matter up to an effective range of 25 feet, dissolving the atomic
+    links of anything it comes into contact with. \r\nIn its current version (2.8.9),
+    the AM Gun is only effective against red-colored materials. Our scientists believe
+    it has something to do with the light\u2019s wavelength, as it is reflected differently
+    on each color of the spectrum. \r\nAs a result, the AM projectiles will disintegrate
+    any red object they come into contact with, while being completely harmless against
+    other materials. \r\nBE AWARE AND STAY SAFE! An object does NOT need to be completely
+    red to be disintegrated! A spot of red coming into contact with a projectile is
+    sufficient to erase an entire object from existence (the term \u2018object\u2019
+    includes human beings).\r\n"
+  isDocument: 1

@@ -21,9 +21,9 @@ public class InventoryItemButton : MonoBehaviour
         itemButton.onClick.AddListener(delegate { OnClickInventoryButton(); });
     }
 
-    public void Init(Interactable item)
+    public void Init(InventoryItemInteractable item)
     {
-        InventoryItemData _itemData = item.objectData;
+        InventoryItemData _itemData = item.data;
         itemData = _itemData;
         Debug.Log(_itemData);
         buttonNameText.SetText(_itemData.objectDescriptionTitle);

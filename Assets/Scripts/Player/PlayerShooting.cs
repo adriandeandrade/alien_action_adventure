@@ -16,7 +16,7 @@ public class PlayerShooting : MonoBehaviour
     public GunMode gunMode;
 
     Camera cam;
-    Interaction interaction;
+    PlayerZoomController interaction;
 
     float currentModeIndex;
 
@@ -25,7 +25,9 @@ public class PlayerShooting : MonoBehaviour
     private void Awake()
     {
         cam = Camera.main;
-        interaction = GetComponent<Interaction>();
+        interaction = GetComponent<PlayerZoomController>();
+        gunMode = GunMode.AG;
+        debugGunMode.text = "Anti-Gravity Mode";
     }
 
     private void Update()

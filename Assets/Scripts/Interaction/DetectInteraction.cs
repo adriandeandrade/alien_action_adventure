@@ -10,13 +10,13 @@ public class DetectInteraction : MonoBehaviour
     public bool isWithinInteractionDistance;
 
     SphereCollider interactionCollider;
-    InteractionUIController worldSpaceUIController;
-    InteractableBase interactableBase;
+    [HideInInspector] public InteractionUIController worldSpaceUIController;
+    InteractableBaseInteractable interactableBase;
 
     private void Awake()
     {
         interactionCollider = GetComponent<SphereCollider>();
-        interactableBase = GetComponent<InteractableBase>();
+        interactableBase = GetComponent<InteractableBaseInteractable>();
         worldSpaceUIController = FindObjectOfType<InteractionUIController>();
     }
 

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: obj_data_document_4
   m_EditorClassIdentifier: 
   interactionTitle: Document
-  objectDescriptionTitle: Harry Hogunni
+  objectDescriptionTitle: 'Scientist Log #4'
   objectDescription: "\u201CDecreasing the AM particles output below to Luskev Treshold
     allows for the creation of a hybrid matter/antimatter slime. This material can
     be shot as a sticky fixative gel or shaped in any way we can imagine! In memory

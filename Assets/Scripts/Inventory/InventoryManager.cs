@@ -52,9 +52,9 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
-    public void AddItem(Interactable itemToAdd)
+    public void AddItem(InventoryItemInteractable itemToAdd)
     {
-        InventoryItemData newItemData = itemToAdd.objectData;
+        InventoryItemData newItemData = itemToAdd.data;
 
         GameObject newButton = Instantiate(inventoryButtonPrefab, scrollViewContentParent);
         InventoryItemButton newButtonData = newButton.GetComponent<InventoryItemButton>();

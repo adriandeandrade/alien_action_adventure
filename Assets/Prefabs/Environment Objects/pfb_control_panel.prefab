@@ -9,8 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 690944664}
-  - component: {fileID: 690944665}
   - component: {fileID: 690944666}
+  - component: {fileID: 1945680285}
+  - component: {fileID: 1945680286}
+  - component: {fileID: 1945680287}
   m_Layer: 0
   m_Name: pfb_control_panel
   m_TagString: Untagged
@@ -35,22 +37,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &690944665
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 690944663}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 445aa5faf46e120419ce44f7b2ac51ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectData: {fileID: 11400000, guid: 40d66abc73435dc42842bf50522e53ca, type: 2}
-  interactionPosition: {fileID: 1203527788}
-  useCustomInteractionPosition: 1
-  isInteractable: 0
 --- !u!135 &690944666
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -59,11 +45,71 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 690944663}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.74
   m_Center: {x: 0, y: 1.08, z: 0.76}
+--- !u!114 &1945680285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 690944663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3f4bfe55dbc90548893099819e73aa4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: bdf64b431e297bc4bb65100a6dea21bc, type: 2}
+  OnInteract:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1945680287}
+        m_MethodName: TriggerDoorOpen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  isInteractable: 0
+--- !u!114 &1945680286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 690944663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53149c55ae79d1d4cb8d9421eedf293b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionPosition: {fileID: 0}
+  useCustomInteractionPosition: 0
+  isWithinInteractionDistance: 0
+  worldSpaceUIController: {fileID: 0}
+--- !u!114 &1945680287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 690944663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0487efeb8cdf0ce4eb5c6bf005f0d206, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftDoor: {fileID: 0}
+  rightDoor: {fileID: 0}
 --- !u!1 &1203527787
 GameObject:
   m_ObjectHideFlags: 0
@@ -105,7 +151,7 @@ GameObject:
   - component: {fileID: 1945680288}
   - component: {fileID: 1945680290}
   - component: {fileID: 1945680289}
-  - component: {fileID: 1945680286}
+  - component: {fileID: 8535445776973564381}
   m_Layer: 0
   m_Name: Cloning_Control_Panel
   m_TagString: Untagged
@@ -174,7 +220,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &1945680286
+--- !u!64 &8535445776973564381
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -188,7 +234,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 2aabc01a59a883d4196a236c8da9c408, type: 3}
---- !u!1 &1945680285
+--- !u!1 &6663201358392916583
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -199,7 +245,7 @@ GameObject:
   - component: {fileID: 1945680291}
   - component: {fileID: 1945680293}
   - component: {fileID: 1945680292}
-  - component: {fileID: 1945680287}
+  - component: {fileID: 3014610439138366233}
   m_Layer: 0
   m_Name: CButtons
   m_TagString: Untagged
@@ -213,7 +259,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1945680285}
+  m_GameObject: {fileID: 6663201358392916583}
   m_LocalRotation: {x: -0.67951155, y: 0, z: -0, w: 0.7336648}
   m_LocalPosition: {x: -0, y: -0.10301697, z: -0.10376529}
   m_LocalScale: {x: 1, y: 0.99999994, z: 0.99999994}
@@ -227,7 +273,7 @@ MeshFilter:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1945680285}
+  m_GameObject: {fileID: 6663201358392916583}
   m_Mesh: {fileID: 4300002, guid: 2aabc01a59a883d4196a236c8da9c408, type: 3}
 --- !u!23 &1945680292
 MeshRenderer:
@@ -235,7 +281,7 @@ MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1945680285}
+  m_GameObject: {fileID: 6663201358392916583}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -268,13 +314,13 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &1945680287
+--- !u!64 &3014610439138366233
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1945680285}
+  m_GameObject: {fileID: 6663201358392916583}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1

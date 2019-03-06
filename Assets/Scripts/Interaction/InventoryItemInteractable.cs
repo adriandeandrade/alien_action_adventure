@@ -24,9 +24,9 @@ public class InventoryItemInteractable : MonoBehaviour
 
     private void Update()
     {
-        if(detectItemInteraction.lookingAt)
+        if(detectItemInteraction.isWithinInteractionDistance)
         {
-            if(Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 Interact();
             }
@@ -35,6 +35,10 @@ public class InventoryItemInteractable : MonoBehaviour
 
     public void Interact()
     {
-
+        OnPickup.Invoke();
+        InventoryManager.instance.AddItem(this);
+        detectItemInteraction.worldSpaceUIController.ToggleCanvas(false);
+        isInteractable = false;
+        Destroy(gameObject);
     }
 }

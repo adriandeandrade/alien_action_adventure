@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 [RequireComponent(typeof(DetectInteraction))]
-public class InteractableBase : MonoBehaviour
+public class InteractableBaseInteractable : MonoBehaviour
 {
     public InteractableData data;
     [SerializeField] private UnityEvent OnInteract;
@@ -36,6 +36,8 @@ public class InteractableBase : MonoBehaviour
     public void Interact()
     {
         OnInteract.Invoke();
+        detectInteraction.worldSpaceUIController.ToggleCanvas(false);
+        isInteractable = false;
         Debug.Log("Interacted With Object");
     }
 }

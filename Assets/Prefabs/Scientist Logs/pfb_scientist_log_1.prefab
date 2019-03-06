@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1753947908745639860}
   - component: {fileID: 1753947908745639862}
-  - component: {fileID: 1753947908745639863}
+  - component: {fileID: 1834369085}
+  - component: {fileID: 1834369086}
   m_Layer: 0
   m_Name: pfb_scientist_log_1
   m_TagString: Untagged
@@ -47,7 +48,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 1.4
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1753947908745639863
+--- !u!114 &1834369085
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -56,13 +57,32 @@ MonoBehaviour:
   m_GameObject: {fileID: 1753947908745639861}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58ac789e0362553479407c330d7f221c, type: 3}
+  m_Script: {fileID: 11500000, guid: 54b63488cc0672a438bd6212462d0d80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectData: {fileID: 11400000, guid: 72c6e32a3d7963b48a3b5714f4485686, type: 2}
+  OnPickup:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  data: {fileID: 11400000, guid: 72c6e32a3d7963b48a3b5714f4485686, type: 2}
+  isInteractable: 1
+--- !u!114 &1834369086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1753947908745639861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d796ec79c81c86408ae5d98dffd2b8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   interactionPosition: {fileID: 1753947909085029549}
   useCustomInteractionPosition: 1
-  isInteractable: 1
+  isWithinInteractionDistance: 0
+  worldSpaceUIController: {fileID: 0}
 --- !u!1 &1753947909085029538
 GameObject:
   m_ObjectHideFlags: 0
@@ -87,7 +107,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1753947909085029538}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.27, z: 0.004}
+  m_LocalPosition: {x: 0, y: 0.449, z: 0.004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1753947908745639860}

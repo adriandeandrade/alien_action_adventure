@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: obj_data_document_2
   m_EditorClassIdentifier: 
   interactionTitle: Document
-  objectDescriptionTitle: Fate is Bullshit
+  objectDescriptionTitle: 'Scientist Log #2'
   objectDescription: 'Fate is bullshit. We finally finished work on the Antimatter
     Gun but it''s radiation output is just too much to handle. Amelie literally melted
     when she tested that fucking thing. Maybe the clones could have survived such

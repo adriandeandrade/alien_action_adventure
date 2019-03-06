@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: obj_data_document_3
   m_EditorClassIdentifier: 
   interactionTitle: Document
-  objectDescriptionTitle: Don't Speak So Soon
+  objectDescriptionTitle: 'Scientist Log #3'
   objectDescription: "I\u2019m so excited, Amelie! I can\u2019t believe we\u2019ve
     almost finished work on the AM Gun! For the first time in months, something finally
     goes right! By the way, I\u2019ve started developing some blueprints for upgrades.

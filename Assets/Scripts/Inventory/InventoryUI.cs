@@ -13,4 +13,14 @@ public class InventoryUI : MonoBehaviour
         itemDescriptionText.SetText(itemData.objectDescription);
         itemButtonTitleText.SetText(itemData.objectDescriptionTitle);
     }
+
+    public void NextDescPage()
+    {
+        itemDescriptionText.pageToDisplay++;
+    }
+
+    public void LastDescPage()
+    {
+        itemDescriptionText.pageToDisplay--;
+    }
 }

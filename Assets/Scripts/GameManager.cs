@@ -25,7 +25,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject gunPrefab;
 
     [Header("Game Events and Triggers")]
-    public UnityEvent OnPickupGun;
     public LayerMask itemPickUpLayer;
 
     bool hasLog2;
@@ -78,10 +77,7 @@ public class GameManager : MonoBehaviour
 
     private void InitalizeEvents()
     {
-        if(OnPickupGun == null)
-        {
-            OnPickupGun = new UnityEvent();
-        }
+        
     }
 
     private void Update()
