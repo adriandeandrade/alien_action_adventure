@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     #endregion
 
     [SerializeField] private GameObject gunPrefab;
+    public ItemPickupNotification icon;
 
     [Header("Game Events and Triggers")]
     public LayerMask itemPickUpLayer;

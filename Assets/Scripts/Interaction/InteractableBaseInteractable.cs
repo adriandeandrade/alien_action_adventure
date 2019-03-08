@@ -26,7 +26,7 @@ public class InteractableBaseInteractable : MonoBehaviour
     {
         if(detectInteraction.isWithinInteractionDistance)
         {
-            if(Input.GetKeyDown(KeyCode.E))
+            if(Input.GetKeyDown(KeyCode.F))
             {
                 Interact();
             }

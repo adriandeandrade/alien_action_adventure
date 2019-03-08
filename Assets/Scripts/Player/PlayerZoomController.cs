@@ -23,13 +23,13 @@ public class PlayerZoomController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && !isZoom)
+        if (Input.GetMouseButton(1) && !isZoom)
         {
             animator.SetBool("IsInteracting", true);
             cameraController.ToggleZoomAndSetFov(true, 30f);
             isZoom = true;
         }
-        else if (Input.GetKeyUp(KeyCode.Space) && isZoom)
+        else if (Input.GetMouseButtonUp(1) && isZoom)
         {
             animator.SetBool("IsInteracting", false);
             cameraController.ToggleZoomAndSetFov(false, 40f);

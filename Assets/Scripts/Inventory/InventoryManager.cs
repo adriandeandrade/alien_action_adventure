@@ -46,10 +46,16 @@ public class InventoryManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.I))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             ToggleInventory();
         }
+
+        if(inventoryActive && Input.GetKeyDown(KeyCode.Escape))
+        {
+            ToggleInventory();
+        }
+
     }
 
     public void AddItem(InventoryItemInteractable itemToAdd)
@@ -61,7 +67,7 @@ public class InventoryManager : MonoBehaviour
         newButtonData.Init(itemToAdd);
         items.Add(newButton);
         Destroy(itemToAdd.gameObject);
-        ToggleInventory();
+        //ToggleInventory();
         inventoryUI.UpdateInventoryUI(newItemData);
         
     }

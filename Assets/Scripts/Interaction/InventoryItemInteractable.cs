@@ -11,6 +11,7 @@ public class InventoryItemInteractable : MonoBehaviour
     public bool isInteractable; // Used to make object interactable or now.
 
     DetectItemInteraction detectItemInteraction;
+    ItemPickupNotification notification;
 
     private void Awake()
     {
@@ -20,13 +21,14 @@ public class InventoryItemInteractable : MonoBehaviour
         }
 
         detectItemInteraction = GetComponent<DetectItemInteraction>();
+        notification = FindObjectOfType<ItemPickupNotification>();
     }
 
     private void Update()
     {
         if(detectItemInteraction.isWithinInteractionDistance)
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.F))
             {
                 Interact();
             }
@@ -37,6 +39,7 @@ public class InventoryItemInteractable : MonoBehaviour
     {
         OnPickup.Invoke();
         InventoryManager.instance.AddItem(this);
+        notification.ShowIcon();
         detectItemInteraction.worldSpaceUIController.ToggleCanvas(false);
         isInteractable = false;
         Destroy(gameObject);

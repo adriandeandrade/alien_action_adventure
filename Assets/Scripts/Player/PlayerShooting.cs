@@ -12,7 +12,7 @@ public class PlayerShooting : MonoBehaviour
 
     public Text debugGunMode;
 
-    public enum GunMode { AM, AG, Taser };
+    public enum GunMode { AM, AG };
     public GunMode gunMode;
 
     Camera cam;
@@ -26,13 +26,16 @@ public class PlayerShooting : MonoBehaviour
     {
         cam = Camera.main;
         interaction = GetComponent<PlayerZoomController>();
-        gunMode = GunMode.AG;
-        debugGunMode.text = "Anti-Gravity Mode";
+        gunMode = GunMode.AM;
+        SwitchThroughGunModes();
     }
 
     private void Update()
     {
-        SwitchThroughGunModes();
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            SwitchThroughGunModes();
+        }
 
         if (interaction.isZoom && GameManager.instance.CanShoot)
         {
@@ -45,9 +48,6 @@ public class PlayerShooting : MonoBehaviour
                         break;
                     case GunMode.AG:
                         ShootAG();
-                        break;
-                    case GunMode.Taser:
-                        ShootTaser();
                         break;
                 }
             }
@@ -90,44 +90,23 @@ public class PlayerShooting : MonoBehaviour
         }
     }
 
-    private void ShootTaser()
-    {
-        if (Time.time > nextShotTime)
-        {
-            RaycastHit hit;
-            if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, Mathf.Infinity, taserMask))
-            {
-                Debug.Log(hit.transform.name + " was shot");
-            }
-
-            nextShotTime = Time.time + cooldown;
-        }
-    }
-
     private void SwitchThroughGunModes()
     {
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            if (currentModeIndex < 2)
-                currentModeIndex++;
-            else
-                currentModeIndex = 0;
+        if (currentModeIndex < 1)
+            currentModeIndex++;
+        else
+            currentModeIndex = 0;
 
-            switch (currentModeIndex)
-            {
-                case 0:
-                    gunMode = GunMode.AM;
-                    debugGunMode.text = "Anti-Matter Mode";
-                    break;
-                case 1:
-                    gunMode = GunMode.AG;
-                    debugGunMode.text = "Anti-Gravity Mode";
-                    break;
-                case 2:
-                    gunMode = GunMode.Taser;
-                    debugGunMode.text = "Taser Mode";
-                    break;
-            }
+        switch (currentModeIndex)
+        {
+            case 0:
+                gunMode = GunMode.AM;
+                debugGunMode.text = "Anti-Matter Mode";
+                break;
+            case 1:
+                gunMode = GunMode.AG;
+                debugGunMode.text = "Anti-Gravity Mode";
+                break;
         }
     }
 }
