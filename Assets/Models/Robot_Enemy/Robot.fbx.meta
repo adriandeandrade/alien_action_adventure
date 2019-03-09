@@ -1,0 +1,206 @@
+fileFormatVersion: 2
+guid: f024663dd4592ed4da59d011481df098
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Armature
+    100002: Foot.L
+    100004: Foot.L_end
+    100006: Foot.R
+    100008: Foot.R_end
+    100010: IKLeg.L
+    100012: IKLeg.L_end
+    100014: IKLeg.R
+    100016: IKLeg.R_end
+    100018: LowerLeg.L
+    100020: LowerLeg.R
+    100022: PTargetLeg.L
+    100024: PTargetLeg.L_end
+    100026: PTargetLeg.R
+    100028: PTargetLeg.R_end
+    100030: Right_Leg
+    100032: //RootNode
+    100034: Spine1
+    100036: Spine2
+    100038: UpperLeg.L
+    100040: UpperLeg.R
+    400000: Armature
+    400002: Foot.L
+    400004: Foot.L_end
+    400006: Foot.R
+    400008: Foot.R_end
+    400010: IKLeg.L
+    400012: IKLeg.L_end
+    400014: IKLeg.R
+    400016: IKLeg.R_end
+    400018: LowerLeg.L
+    400020: LowerLeg.R
+    400022: PTargetLeg.L
+    400024: PTargetLeg.L_end
+    400026: PTargetLeg.R
+    400028: PTargetLeg.R_end
+    400030: Right_Leg
+    400032: //RootNode
+    400034: Spine1
+    400036: Spine2
+    400038: UpperLeg.L
+    400040: UpperLeg.R
+    2100000: Mat_HInge
+    2100002: Mat_Leg
+    2100004: Mat_Foot
+    2100006: Mat_Body_Bottom
+    2100008: Mat_Main_Body
+    2100010: Mat_Secondary_Body
+    2100012: Mat_Eye
+    2100014: Mat_Gun_Barrell
+    2100016: Mat_Gun_Inside
+    2100018: Mat_Gun_Supports
+    2100020: Mat_Ends
+    4300000: Right_Leg
+    7400000: anim_Awake
+    7400002: anim_Robot-Walk
+    7400004: Armature|anim_Awake
+    7400006: Armature|anim_Robot-Walk
+    9500000: //RootNode
+    13700000: Right_Leg
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Body_Bottom
+    second: {fileID: 2100000, guid: 7992fb79c205a264fad0574a90159baa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Ends
+    second: {fileID: 2100000, guid: 665c628d17df5904ca995acbb516f367, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Eye
+    second: {fileID: 2100000, guid: 9df872325ba49b74080274da5a9dd883, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Foot
+    second: {fileID: 2100000, guid: 94c7c3bf2f4d90947a33e942411241df, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Gun_Barrell
+    second: {fileID: 2100000, guid: 0aa80542e988f7e48a1485332cdf2f7d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Gun_Inside
+    second: {fileID: 2100000, guid: 6091624ab5860dd49beaa32a9f6eea6f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Gun_Supports
+    second: {fileID: 2100000, guid: 1ad1cab40e7d5d14cab34589dc99686e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_HInge
+    second: {fileID: 2100000, guid: 08c9075a6699b4642a95f3935c74a4c1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Leg
+    second: {fileID: 2100000, guid: baaa96d7d4609f44ab1a151b5e02f50f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Main_Body
+    second: {fileID: 2100000, guid: 496d182fef73796498ebbd2d96ee880e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Secondary_Body
+    second: {fileID: 2100000, guid: 6e6919c132c000b488ac2925301a5c51, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
