@@ -8,17 +8,15 @@ public class PlayerZoomController : MonoBehaviour
 
     Camera cam;
     Animator animator;
-    MovementInput moveInput;
-    CameraController cameraController;
+    vThirdPersonCamera cameraController;
 
     public bool isZoom;
 
     private void Awake()
     {
-        moveInput = GetComponent<MovementInput>();
         animator = GetComponentInChildren<Animator>();
         cam = Camera.main;
-        cameraController = cam.GetComponentInParent<CameraController>();
+        cameraController = cam.GetComponentInParent<vThirdPersonCamera>();
     }
 
     private void Update()
@@ -26,13 +24,13 @@ public class PlayerZoomController : MonoBehaviour
         if (Input.GetMouseButton(1) && !isZoom)
         {
             animator.SetBool("IsInteracting", true);
-            cameraController.ToggleZoomAndSetFov(true, 30f);
+            cameraController.ToggleZoomAndSetFov(true, 40f);
             isZoom = true;
         }
         else if (Input.GetMouseButtonUp(1) && isZoom)
         {
             animator.SetBool("IsInteracting", false);
-            cameraController.ToggleZoomAndSetFov(false, 40f);
+            cameraController.ToggleZoomAndSetFov(false, 60f);
             isZoom = false;
         }
     }

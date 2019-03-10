@@ -20,12 +20,12 @@ public class CameraController : MonoBehaviour
     bool isZoomed;
 
     Camera cam;
-    MovementInput movementInput;
+    MovementNew movementInput;
 
     private void Awake()
     {
         cam = Camera.main;
-        movementInput = followTarget.GetComponentInParent<MovementInput>();
+        movementInput = followTarget.GetComponentInParent<MovementNew>();
     }
 
     private void Start()
