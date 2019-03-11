@@ -11,6 +11,5 @@ public class GeneratorDoorControl : MonoBehaviour
     {
         leftDoor.SetActive(false);
         rightDoor.SetActive(false);
-        
     }
 }

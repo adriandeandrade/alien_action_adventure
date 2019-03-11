@@ -14,8 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactionTitle: Document
   objectDescriptionTitle: 'Scientist Log #5'
-  objectDescription: "\u201CDecreasing the AM particles output below to Luskev Treshold
-    allows for the creation of a highly entropic projectile which destroys time around
-    its target instead of the target itself. The effect is always temporary, as time
-    quickly fills in the void without delay. I guess you could expect that.\u201D"
+  objectDescription: '"Who''s idea was it to put the door control panel for the generator
+    room up there? I need to find some way to get up there."'
   isDocument: 1

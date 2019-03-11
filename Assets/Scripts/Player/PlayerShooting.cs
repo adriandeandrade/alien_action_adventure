@@ -21,20 +21,23 @@ public class PlayerShooting : MonoBehaviour
     PlayerZoomController interaction;
 
     float currentModeIndex;
-
     float nextShotTime;
+
+    [HideInInspector] public bool hasGravityBlueprint;
 
     private void Awake()
     {
         cam = Camera.main;
         interaction = GetComponent<PlayerZoomController>();
         gunMode = GunMode.AM;
-        SwitchThroughGunModes();
+        currentModeIndex = 0;
+        debugGunMode.text = "Anti-Matter Mode";
+        //SwitchThroughGunModes();
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.T))
+        if (Input.GetKeyDown(KeyCode.T) && hasGravityBlueprint)
         {
             SwitchThroughGunModes();
         }

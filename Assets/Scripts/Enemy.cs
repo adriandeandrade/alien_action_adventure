@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Invector.CharacterController;
+using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
@@ -11,14 +12,16 @@ public class Enemy : MonoBehaviour
     public enum EnemyStates { SLEEP, AWAKE};
     public EnemyStates enemyState;
 
-    public vThirdPersonController player;
+    vThirdPersonController player;
     Rigidbody rBody;
+    NavMeshAgent agent;
 
     private void Awake()
     {
         enemyState = EnemyStates.SLEEP;
         player = FindObjectOfType<vThirdPersonController>();
         rBody = GetComponent<Rigidbody>();
+        agent = GetComponent<NavMeshAgent>();
     }
 
     private void Update()
@@ -45,10 +48,12 @@ public class Enemy : MonoBehaviour
 
     private void AwakeState()
     {
-        Vector3 movementDirection = player.gameObject.transform.position - transform.position;
-        Debug.Log(movementDirection.normalized);
-        rBody.velocity = movementDirection * moveSpeed;
-        transform.rotation = Quaternion.LookRotation(transform.forward, Vector3.up);
+        agent.destination = player.transform.position;
+
+        //Vector3 movementDirection = player.gameObject.transform.position - transform.position;
+        //Debug.Log(movementDirection.normalized);
+        //rBody.velocity = movementDirection * moveSpeed;
+        //transform.rotation = Quaternion.LookRotation(transform.forward, Vector3.up);
     }
 
     public void TakeDamage(int amount)
