@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactionTitle: Document
   objectDescriptionTitle: 'Scientist Log #3'
-  objectDescription: "I\u2019m so excited, Amelie! I can\u2019t believe we\u2019ve
+  objectDescription: "\u201CI\u2019m so excited, Amelie! I can\u2019t believe we\u2019ve
     almost finished work on the AM Gun! For the first time in months, something finally
     goes right! By the way, I\u2019ve started developing some blueprints for upgrades.
-    That thing has so much potential!\r\nFeel free to develop your own, as I\u2019m
-    sure you\u2019re already eager to do! You just need to insert your blueprints
-    in the gun matrix and the imbedded AI converter will add the new capabilities
-    to your weapon. Amazing, isn\u2019t it?\u201D\r\n"
+    That thing has so much potential!\r\n\n\nFeel free to develop your own, as I\u2019m
+    sure you\u2019re eager to do! You just need to insert your blueprints in the gun
+    matrix and the imbedded AI converter will add the new capabilities to your weapon.
+    Extraordinary, isn\u2019t it?\u201D\r\n"
   isDocument: 1

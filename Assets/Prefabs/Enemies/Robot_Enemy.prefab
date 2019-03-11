@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6202414326846073298}
   - component: {fileID: 565044794414372130}
+  - component: {fileID: 794105103}
   m_Layer: 14
   m_Name: Robot_Enemy
   m_TagString: Untagged
@@ -45,6 +46,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 3
+  moveSpeed: 3
+  enemyState: 0
+  player: {fileID: 0}
+--- !u!54 &794105103
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565044794414372129}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!65 &3555976875011669807
 BoxCollider:
   m_ObjectHideFlags: 0

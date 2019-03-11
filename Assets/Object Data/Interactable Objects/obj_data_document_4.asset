@@ -15,9 +15,7 @@ MonoBehaviour:
   interactionTitle: Document
   objectDescriptionTitle: 'Scientist Log #4'
   objectDescription: "\u201CDecreasing the AM particles output below to Luskev Treshold
-    allows for the creation of a hybrid matter/antimatter slime. This material can
-    be shot as a sticky fixative gel or shaped in any way we can imagine! In memory
-    of our old LAN parties, I designed this first iteration as a kickass battle axe.
-    CROM FOREVAAAA!\r\n\u2026\r\nWow. For a second there, I almost forgot we\u2019re
-    all going to die. \u201C\r\n"
+    allows for the creation of a highly entropic projectile which destroys time around
+    its target instead of the target itself. The effect is always temporary, as time
+    quickly fills in the void without delay. I guess you could expect that.\u201D"
   isDocument: 1

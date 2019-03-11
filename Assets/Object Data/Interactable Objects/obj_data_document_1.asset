@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactionTitle: Document
   objectDescriptionTitle: 'Scientist Log #1'
-  objectDescription: '"I will try to re-establish power to the central elevator and
-    get back to the surface. Fuck this science shit. I just want to see daylight again."'
+  objectDescription: "\u201CI will try to return power to the central elevator and
+    reach the surface. Fuck this science shit! I just want to see daylight again.\u201D"
   isDocument: 1

@@ -385,7 +385,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 963387428}
-  - component: {fileID: 299444603}
   - component: {fileID: 299444602}
   - component: {fileID: 299444601}
   - component: {fileID: 299444600}
@@ -418,23 +417,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -179.99998, z: 0}
---- !u!114 &299444603
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 299444597}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19c789670a80b704eba4dfebed94a111, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  comment: "Hi there :)\n\nThank you for downloading our Third Person Controller,
-    don't forget to leave a review if you like our work. We hope that this Free version
-    can help you start your project.\n \nBest regards, \nInvector Team\n\nvStore:
-    https://sellfy.com//invector\nvForum: http://invector.proboards.com/\r\nvWebsite:
-    http://www.invector.xyz/"
 --- !u!95 &299444602
 Animator:
   serializedVersion: 3
@@ -479,7 +461,7 @@ MonoBehaviour:
   jumpTimer: 0.3
   jumpCounter: 0
   jumpForward: 3
-  jumpHeight: 4
+  jumpHeight: 9
   useRootMotion: 0
   freeWalkSpeed: 2.5
   freeRunningSpeed: 3
@@ -588,6 +570,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   cooldown: 0
+  antiGravitySpot: {fileID: 4767122427630965746, guid: 06681d0fe35d8f7448c349bddc29bf78,
+    type: 3}
   debugGunMode: {fileID: 0}
   gunMode: 0
 --- !u!114 &299444605
