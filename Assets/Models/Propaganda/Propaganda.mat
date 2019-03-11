@@ -7,9 +7,9 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Logo
+  m_Name: Propaganda
   m_Shader: {fileID: 4800000, guid: 1d64af84bdc970c4fae0c1e06dd95b73, type: 3}
-  m_ShaderKeywords: _ALBEDOCONTRIBUTION _COLORMAP _REQUIRE_UV2
+  m_ShaderKeywords: _ALBEDOCONTRIBUTION _COLORMAP _NORMALMAP_TANGENT_SPACE
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
@@ -35,9 +35,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseColorMap:
-        m_Texture: {fileID: 2800000, guid: a7b3eac6e5c872949b94bd41178057fd, type: 3}
+        m_Texture: {fileID: 2800000, guid: e20d2197693bd4d4f91d06fa01520025, type: 3}
         m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 1.999, y: -0.466}
+        m_Offset: {x: 0, y: 0}
     - _BentNormalMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -75,7 +75,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 54a27e360bf77c648b931ce9487e23f1, type: 3}
+        m_Texture: {fileID: 2800000, guid: e20d2197693bd4d4f91d06fa01520025, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskMap:
@@ -131,7 +131,7 @@ Material:
     - _CullMode: 2
     - _CullModeForward: 2
     - _Cutoff: 0.5
-    - _DecalBlend: 1
+    - _DecalBlend: 0.974
     - _DecalMaskMapBlueScale: 1
     - _DecalMeshDepthBias: 0
     - _DecalStencilRef: 8
@@ -196,8 +196,8 @@ Material:
     - _Metallic: 0
     - _MetallicScale: 1
     - _NormalBlendSrc: 0
-    - _NormalMapSpace: 1
-    - _NormalScale: 1.29
+    - _NormalMapSpace: 0
+    - _NormalScale: 1
     - _PPDLodThreshold: 5
     - _PPDMaxSamples: 15
     - _PPDMinSamples: 5
@@ -232,7 +232,7 @@ Material:
     - _TransparentDepthPostpassEnable: 0
     - _TransparentDepthPrepassEnable: 0
     - _TransparentSortPriority: 0
-    - _UVBase: 2
+    - _UVBase: 0
     - _UVDetail: 0
     - _UVEmissive: 0
     - _UseShadowThreshold: 0
@@ -253,5 +253,5 @@ Material:
     - _ThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
     - _TransmittanceColor: {r: 1, g: 1, b: 1, a: 1}
     - _UVDetailsMappingMask: {r: 1, g: 0, b: 0, a: 0}
-    - _UVMappingMask: {r: 0, g: 0, b: 1, a: 0}
+    - _UVMappingMask: {r: 1, g: 0, b: 0, a: 0}
     - _UVMappingMaskEmissive: {r: 1, g: 0, b: 0, a: 0}
