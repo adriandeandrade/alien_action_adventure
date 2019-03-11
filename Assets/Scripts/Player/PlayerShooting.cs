@@ -10,6 +10,8 @@ public class PlayerShooting : MonoBehaviour
     [SerializeField] private LayerMask taserMask;
     [SerializeField] private float cooldown;
 
+    [SerializeField] private GameObject antiGravitySpot;
+
     public Text debugGunMode;
 
     public enum GunMode { AM, AG };
@@ -62,7 +64,7 @@ public class PlayerShooting : MonoBehaviour
             if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, Mathf.Infinity, amMask))
             {
                 hit.transform.gameObject.SetActive(false);
-                Debug.Log(hit.transform.name + " was shot");
+                //Debug.Log(hit.transform.name + " was shot");
             }
 
             nextShotTime = Time.time + cooldown;
@@ -74,16 +76,11 @@ public class PlayerShooting : MonoBehaviour
         if (Time.time > nextShotTime)
         {
             RaycastHit hit;
-            if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, Mathf.Infinity, agMask))
+            if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, Mathf.Infinity))
             {
-                Rigidbody rBody = hit.transform.GetComponent<Rigidbody>();
+                GameObject agSpot = Instantiate(antiGravitySpot, hit.point, Quaternion.identity);
 
-                if (!rBody.isKinematic)
-                    rBody.isKinematic = true;
-                else
-                    rBody.isKinematic = false;
-
-                Debug.Log(hit.transform.name + " was shot");
+                //Debug.Log(hit.transform.name + " was shot");
             }
 
             nextShotTime = Time.time + cooldown;

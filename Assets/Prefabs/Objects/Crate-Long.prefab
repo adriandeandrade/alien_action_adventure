@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2974343276296891578}
+  - component: {fileID: 1282896869393139367}
   m_Layer: 0
   m_Name: Crate-Long
   m_TagString: Untagged
@@ -25,12 +26,25 @@ Transform:
   m_GameObject: {fileID: 1435989713298665116}
   m_LocalRotation: {x: 0.05568457, y: -0.02248849, z: 0.0012892962, w: 0.9981943}
   m_LocalPosition: {x: -9.259651, y: 6.0457277, z: 9.394058}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1514007, y: 1.1513997, z: 1.1514006}
   m_Children:
   - {fileID: 2780604912726161750}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 6.386, y: -2.581, z: 0.004}
+--- !u!65 &1282896869393139367
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1435989713298665116}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.0876489, y: 0.90620935, z: 1}
+  m_Center: {x: 0.0028778908, y: 0.449531, z: -0.0000000035841903}
 --- !u!1001 &2780604912725763026
 PrefabInstance:
   m_ObjectHideFlags: 0
