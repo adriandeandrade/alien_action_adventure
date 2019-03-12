@@ -66,6 +66,14 @@ public class PlayerShooting : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, Mathf.Infinity, amMask))
             {
+                Enemy enemy = hit.collider.GetComponentInParent<Enemy>();
+
+                if(enemy != null)
+                {
+                    enemy.Sleep();
+                    return;
+                }
+
                 hit.transform.gameObject.SetActive(false);
                 //Debug.Log(hit.transform.name + " was shot");
             }

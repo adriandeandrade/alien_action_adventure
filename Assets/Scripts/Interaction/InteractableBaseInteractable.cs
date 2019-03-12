@@ -38,6 +38,7 @@ public class InteractableBaseInteractable : MonoBehaviour
         OnInteract.Invoke();
         detectInteraction.worldSpaceUIController.ToggleCanvas(false);
         isInteractable = false;
+        detectInteraction.isWithinInteractionDistance = false;
         Debug.Log("Interacted With Object");
     }
 }

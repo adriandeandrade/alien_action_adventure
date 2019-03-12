@@ -8,8 +8,12 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] private int health;
     [SerializeField] private float moveSpeed;
+    [SerializeField] private MeshRenderer meshRenderer;
+    [SerializeField] private Material eyeOn;
+    [SerializeField] private Material eyeOff;
 
-    public enum EnemyStates { SLEEP, AWAKE};
+
+    public enum EnemyStates { SLEEP, AWAKE };
     public EnemyStates enemyState;
 
     vThirdPersonController player;
@@ -24,6 +28,11 @@ public class Enemy : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
     }
 
+    private void Start()
+    {
+        meshRenderer.material = eyeOff;
+    }
+
     private void Update()
     {
         RunStates();
@@ -31,7 +40,7 @@ public class Enemy : MonoBehaviour
 
     private void RunStates()
     {
-        switch(enemyState)
+        switch (enemyState)
         {
             case EnemyStates.AWAKE:
                 AwakeState();
@@ -44,6 +53,7 @@ public class Enemy : MonoBehaviour
     public void WakeUp()
     {
         enemyState = EnemyStates.AWAKE;
+        meshRenderer.material = eyeOn;
     }
 
     private void AwakeState()
@@ -60,10 +70,16 @@ public class Enemy : MonoBehaviour
     {
         health -= amount;
 
-        if(health <= 0)
+        if (health <= 0)
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
         Debug.Log("Damage taken");
+    }
+
+    public void Sleep()
+    {
+        enemyState = EnemyStates.SLEEP;
+        meshRenderer.material = eyeOff;
     }
 }
